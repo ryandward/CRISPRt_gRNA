@@ -1,3 +1,1 @@
-# CRISPRt_sgRNA
-# CRISPRt_sgRNA
 # CRISPRt_gRNA
