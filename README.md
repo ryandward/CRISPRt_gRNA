@@ -1,4 +1,5 @@
 # CRISPRt_gRNA Design for CN PAMs
+[![DOI](https://zenodo.org/badge/567437408.svg)](https://zenodo.org/badge/latestdoi/567437408)
 
 ## Overview
 This repository, a specialized adaptation of the `sgrna_design` suite, is tailored for designing sgRNAs with CN PAMs, 32 nucleotides in length, for CRISPRt Overexpression applications in bacterial systems. It extends John S. Hawkins's foundational work, which was modified by Ryan D. Ward.
