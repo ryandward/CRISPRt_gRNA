@@ -25,6 +25,18 @@ This repository enhances the `sgrna_design` toolkit for designing sgRNAs that ta
    ```
    Follow the prompts to complete the download, which will store the sequences in the specified directory.
 
+   You should retrieve something like this:
+```
+Download complete! 2 new sequences added to 'download_log.tsv'.
+                                                       Assemblies Information                                                        
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Accession       ┃ Organism                                          ┃ File Path                                                   ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ GCA_000005845.2 │ Escherichia coli str. K-12 substr. MG1655         │ /home/ryandward/Git/seq_hunter/sequences/GCA_000005845.2.gb │
+│ GCA_003054575.1 │ Zymomonas mobilis subsp. mobilis ZM4 = ATCC 31821 │ /home/ryandward/Git/seq_hunter/sequences/GCA_003054575.1.gb │
+└─────────────────┴───────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+```
+
 ### sgRNA Design Execution
 
 To generate sgRNAs, execute the design script with the input GenBank genome file and specify the output file for sgRNAs.
