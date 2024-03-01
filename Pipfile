@@ -9,6 +9,8 @@ pysam = "*"
 pyranges = "*"
 babel = "*"
 rich = "*"
+pandas = "*"
+pyarrow = "*"
 
 [dev-packages]
 
