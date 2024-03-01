@@ -20,6 +20,7 @@ def find_crisprt_sites(genbank_file: str, crisprt_file: str) -> pd.DataFrame:
     CtTargets["GeneTarget"] = CtTargets["LocusTarget"].apply(
         gbp.find_gene_name_for_locus
     )
+    
 
     CtTargets["Strand"] = CtTargets["repldir"].apply(
         lambda x: "+" if x == "fwd" else "-"
@@ -99,13 +100,15 @@ def find_crisprt_sites(genbank_file: str, crisprt_file: str) -> pd.DataFrame:
 
     return df
 
+def parse_transcription_units(file_path):
+    gene_to_tu = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            fields = line.strip().split('\t')
+            tu_id = fields[0]
+            if len(fields) > 1:
+                genes = fields[1].split(' // ')
+                for gene in genes:
+                    gene_to_tu[gene] = tu_id
+    return gene_to_tu
 
-df1 = find_crisprt_sites(
-    "GCA_000005845.2.gb", "GCF_000005845.2_grna_top_ten_dedupe.tsv"
-)
-df2 = find_crisprt_sites(
-    "GCA_003054575.1.gb", "GCF_003054575.1_grna_top_ten_dedupe.tsv"
-)
-
-df1.to_csv("EColi_CtSites.tsv", index=False, sep="\t")
-df2.to_csv("ZMobilis_CtSites.tsv", index=False, sep="\t")
