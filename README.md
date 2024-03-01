@@ -56,7 +56,7 @@ awk 'NR == 1 {print; next} {guides[$1]++} guides[$1] <= 10 {print}' > top_ten_sg
 
 ### Guide Intersection Analysis
 
-To determine potential insertion sites of CRISPRt within upstream genes, utilize the `GenBankParser` tool from the [barcoder toolkit](https://github.com/ryandward/barcoder).
+To determine potential insertion sites of CRISPRt within upstream genes, utilize the `GenBankParser` tool from the [barcoder toolkit](https://github.com/ryandward/barcoder) and custom `find_crisprt_sites.py` as an engine to annotate transcription units.
 ```bash
-pipenv run python find_crisprt_sites.py
+pipenv run python describe_ecoli_and_zmobilis.py
 ```
