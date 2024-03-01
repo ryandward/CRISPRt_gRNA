@@ -12,10 +12,10 @@ This repository enhances the `sgrna_design` toolkit for designing sgRNAs that ta
 1. **Clone the Repository and Prepare the Environment**
    Begin by cloning this repository to your local machine and setting up the Conda environment to manage dependencies.
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/ryandward/CRISPRt_gRNA.git
+   cd CRISPRt_gRNA
    conda env create -f environment.yml
-   conda activate <env_name>
+   conda activate CRISPRt_gRNA
    ```
 
 2. **Retrieve Genomic Data Using `seq_hunter`**
