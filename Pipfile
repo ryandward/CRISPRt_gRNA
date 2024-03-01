@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 bio = "*"
 pysam = "*"
+pyranges = "*"
+babel = "*"
+rich = "*"
 
 [dev-packages]
 
